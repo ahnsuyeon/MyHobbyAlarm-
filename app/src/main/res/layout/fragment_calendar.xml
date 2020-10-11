@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbarStyle="outsideOverlay"
+    app:umanoDragView="@+id/dragView"
+    app:umanoFadeColor="@android:color/transparent"
+    app:umanoOverlay="true"
+    app:umanoScrollableView="@id/recycler"
+    app:umanoShadowHeight="4dp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="@dimen/fab_margin_default"
+                android:layout_marginRight="@dimen/fab_margin_default"
+                android:layout_marginBottom="@dimen/fab_margin_default"
+                app:fabSize="auto"
+                app:srcCompat="@drawable/ic_note_add_24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_padding_vertical_small"
+                android:text="@string/day"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                app:mcv_selectionColor="#a9dbf0cb"
+                app:mcv_showOtherDates="defaults" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+        <EditText
+            android:id="@+id/edtContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <com.example.myhobbyalarm.view.EmptyRecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/empty_view_text" />
+
+
+    </LinearLayout>
+
+</ScrollView>

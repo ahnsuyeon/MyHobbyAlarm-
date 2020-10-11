@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_refresh_36dp"
+        android:title="@string/action_days"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_color"
+        android:icon="@drawable/ic_search_36dp"
+        android:title="@string/action_color"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_calendar"
+        android:title="@string/action_calendar"
+        android:icon="@drawable/ic_date_range_36dp"
+        app:showAsAction="ifRoom"/>]
+
+</menu>
